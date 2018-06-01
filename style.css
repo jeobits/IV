@@ -1,0 +1,94 @@
+:root {
+	--bg-i: #4B5F8B;
+	--text: #A4AFC9;
+	--link: #7181A6;
+	--bg-a: #2C406F;
+	--bg: #132651;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: var(--text);
+}
+
+a {
+	text-decoration: none;
+}
+
+/**::before {
+	content: attr(class);
+	background: hsl(180, 50%, 50%);
+	color: blueviolet;
+}*/
+
+body {
+	background: var(--bg);
+}
+
+header {
+	background: var(--bg-a);
+}
+
+header .logo {
+	width: 80%;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header .logo .web-name {
+	font-size: 2.5rem;
+	text-transform: capitalize;
+	font-family: helvetica;
+	display: inline-block;
+}
+
+header .logo .web-name span {
+	font-size: 1.5rem;
+}
+
+header nav.nav {
+	width: 100%;
+}
+
+header nav.nav ul {
+	list-style: none;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+header nav.nav ul > li {
+	float: left;
+}
+
+header nav.nav ul:hover ul {
+	display: block;
+}
+
+header nav.nav ul a {
+	display: block;
+	padding: 10px 20px;
+	text-align: center;
+	color: var(--link);
+}
+
+header nav.nav ul a:hover {
+	background: var(--bg-i);
+}
+
+header nav.nav ul a:hover ul {
+	display: block;
+}
+
+header nav.nav ul a ul {
+	display: none;
+}
+
+header nav.nav ul a > li {
+	float: none;
+}
