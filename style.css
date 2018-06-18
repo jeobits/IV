@@ -1,21 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Eater|Montserrat|Raleway");
+/* line 2, style.scss */
 :root {
-	--bg-i: #4B5F8B;
-	--text: #A4AFC9;
-	--link: #7181A6;
-	--bg-a: #2C406F;
-	--bg: #132651;
+  --bg-i: #4B5F8B;
+  --text: #A4AFC9;
+  --link: #7181A6;
+  --bg-a: #2C406F;
+  --bg: #132651;
+  --title: Eater;
+  --texto: Raleway;
 }
 
+/* line 12, style.scss */
 * {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	color: var(--text);
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--text);
 }
 
+/* line 19, style.scss */
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /**::before {
@@ -23,72 +29,305 @@ a {
 	background: hsl(180, 50%, 50%);
 	color: blueviolet;
 }*/
-
+/* line 29, style.scss */
 body {
-	background: var(--bg);
+  background: var(--bg);
 }
 
+/* line 33, style.scss */
+.logo,
+main {
+  width: 80%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 41, style.scss */
 header {
-	background: var(--bg-a);
+  background: var(--bg-a);
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
 }
-
+/* line 46, style.scss */
 header .logo {
-	width: 80%;
-	max-width: 960px;
-	margin-left: auto;
-	margin-right: auto;
+  text-align: center;
 }
-
+/* line 48, style.scss */
 header .logo .web-name {
-	font-size: 2.5rem;
-	text-transform: capitalize;
-	font-family: helvetica;
-	display: inline-block;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: var(--title), helvetica;
+  display: inline-block;
+}
+/* line 53, style.scss */
+header .logo .web-name:hover {
+  -webkit-animation: tiembla .01s infinite;
+          animation: tiembla .01s infinite;
+}
+/* line 57, style.scss */
+header .logo .web-slogan {
+  font-size: 1rem;
+  font-family: var(--texto);
+}
+/* line 64, style.scss */
+header nav ul,
+header nav lo {
+  list-style: none;
+  background: var(--bb-i);
+}
+/* line 69, style.scss */
+header nav > ul {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 73, style.scss */
+header nav > ul a {
+  display: block;
+  padding: 8px 25px;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--link);
+}
+/* line 81, style.scss */
+header nav > ul a:hover {
+  background: var(--bg-i);
+}
+/* line 86, style.scss */
+header nav > ul > li {
+  float: left;
+}
+/* line 88, style.scss */
+header nav > ul > li:hover ul {
+  max-height: 50vh;
+}
+/* line 92, style.scss */
+header nav > ul ul {
+  display: block;
+  background: var(--bg-a);
+  position: absolute;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 1;
 }
 
-header .logo .web-name span {
-	font-size: 1.5rem;
+/* line 105, style.scss */
+main {
+  padding-top: 130px;
+  font-family: var(--texto), sans-serif;
+}
+/* line 108, style.scss */
+main article {
+  width: 90%;
+  height: 50vh;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 0 10px 10px;
+  border: 1px solid #fff;
+}
+/* line 116, style.scss */
+main article .header-article {
+  padding: 5px;
+  height: 25%;
+}
+/* line 119, style.scss */
+main article .header-article .title {
+  text-align: center;
+  width: 100%;
+}
+/* line 123, style.scss */
+main article .header-article .cat-by {
+  font-size: .9rem;
+}
+/* line 125, style.scss */
+main article .header-article .cat-by .cat,
+main article .header-article .cat-by .autor {
+  cursor: pointer;
+}
+/* line 128, style.scss */
+main article .header-article .cat-by .cat:hover,
+main article .header-article .cat-by .autor:hover {
+  text-decoration: underline;
+}
+/* line 135, style.scss */
+main article .thumbnail {
+  width: 30%;
+  height: 75%;
+  float: left;
+}
+/* line 139, style.scss */
+main article .thumbnail img {
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+/* line 145, style.scss */
+main article .data {
+  width: 70%;
+  float: right;
+  font-size: .9rem;
+  padding: 0 10px;
+  overflow: hidden;
+  height: 75%;
+}
+/* line 152, style.scss */
+main article .data .descrip {
+  overflow: hidden;
+  height: 100%;
+}
+/* line 155, style.scss */
+main article .data .descrip p {
+  text-overflow: ellipsis;
+}
+/* line 161, style.scss */
+main .paginacion {
+  margin-top: 20px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+/* line 164, style.scss */
+main .paginacion ul {
+  list-style: none;
+}
+/* line 166, style.scss */
+main .paginacion ul li {
+  float: left;
+  margin-left: 10px;
+}
+/* line 169, style.scss */
+main .paginacion ul li a {
+  padding: 5px;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid firebrick;
+}
+/* line 174, style.scss */
+main .paginacion ul li a:active, main .paginacion ul li a:hover,
+main .paginacion ul li a .active {
+  background: firebrick;
 }
 
-header nav.nav {
-	width: 100%;
+/* line 185, style.scss */
+.add-menu {
+  width: 150px;
+  border-radius: 5px 0 0 5px;
+  position: fixed;
+  z-index: 50;
+  top: 150px;
+  right: 0;
+}
+/* line 192, style.scss */
+.add-menu .social-link {
+  list-style: none;
+}
+/* line 195, style.scss */
+.add-menu .social-link li a {
+  background: #fff;
+  position: relative;
+  padding: 10px 10px;
+  display: block;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+  -webkit-transform: translateX(125px);
+          transform: translateX(125px);
+  border-radius: 10px;
+}
+/* line 203, style.scss */
+.add-menu .social-link li a:hover {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  border-radius: 0;
+  background: lime;
+  color: red;
+  font-weight: bold;
 }
 
-header nav.nav ul {
-	list-style: none;
-	max-width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-	overflow: hidden;
+/* line 215, style.scss */
+[href*="facebook.com"] {
+  background: lime;
 }
 
-header nav.nav ul > li {
-	float: left;
+/* line 219, style.scss */
+.clear {
+  clear: both;
 }
 
-header nav.nav ul:hover ul {
-	display: block;
+/* line 223, style.scss */
+footer {
+  margin-top: 100px;
+  background: var(--bg-a);
+  position: relative;
+}
+/* line 227, style.scss */
+footer .nav-footer {
+  width: 80%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+/* line 234, style.scss */
+footer .nav-footer ul {
+  list-style: none;
+}
+/* line 236, style.scss */
+footer .nav-footer ul li {
+  float: left;
+}
+/* line 238, style.scss */
+footer .nav-footer ul li a {
+  display: block;
+  padding: 3px 8px;
+  background: var(--bg-i);
+  margin-right: 3px;
+  border-radius: 5px;
+}
+/* line 248, style.scss */
+footer .copy {
+  padding: 10px;
+  text-align: center;
+}
+/* line 252, style.scss */
+footer .by {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
 }
 
-header nav.nav ul a {
-	display: block;
-	padding: 10px 20px;
-	text-align: center;
-	color: var(--link);
+@-webkit-keyframes tiembla {
+  0% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
 }
 
-header nav.nav ul a:hover {
-	background: var(--bg-i);
-}
-
-header nav.nav ul a:hover ul {
-	display: block;
-}
-
-header nav.nav ul a ul {
-	display: none;
-}
-
-header nav.nav ul a > li {
-	float: none;
+@keyframes tiembla {
+  0% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
 }
